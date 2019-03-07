@@ -1,24 +1,32 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Image:</strong>
-  <%= @color.image %>
+  <%= image_tag @color.image, class: "rounded-circle", style: "width: 20%" %>
 </p>
 
-<p>
-  <strong>Color:</strong>
-  <%= @color.color %>
-</p>
+<br>
+<strong style="font-size: 60PX"><%= @color.color %></strong>
+
 
 <p>
-  <strong>History:</strong>
+<br>
+
+<table style="width:100%">
+
+<tr>
+  <th><strong style="font-size: 30PX">Historique</strong></th>
   <%= @color.history %>
+
+  <th><strong style="font-size: 30PX" >Symbolique</strong></th>
+  <%= @color.symb %>
+</tr>
+
+  </table>
 </p>
 
-<p>
-  <strong>Symb:</strong>
-  <%= @color.symb %>
-</p>
+<% @color.images.each do |image| %>
+<%= image_tag image.url %>
+<% end %>
 
 <%= link_to 'Edit', edit_color_path(@color) %> |
 <%= link_to 'Back', colors_path %>

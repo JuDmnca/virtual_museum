@@ -1,32 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Colors</h1>
+<h1>Colors Museum</h1>
+<br>
+<br>
+<br>
 
-<table>
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th>Color</th>
-      <th>History</th>
-      <th>Symb</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
+
     <% @colors.each do |color| %>
-      <tr>
-        <td><%= image_tag color.image %></td>
-        <td><%= color.color %></td>
-        <td><%= color.history %></td>
-        <td><%= color.symb %></td>
-        <td><%= link_to 'Show', color %></td>
-        <td><%= link_to 'Edit', edit_color_path(color) %></td>
-        <td><%= link_to 'Destroy', color, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <%= link_to color do %>
+        <%= image_tag color.image, class: "rounded-circle", style: "max-width : 15%; border: 2px solid #DBDCDE;"  %>
+      <% end %>
     <% end %>
-  </tbody>
-</table>
 
 <br>
 
