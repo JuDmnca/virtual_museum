@@ -24,9 +24,13 @@
   </table>
 </p>
 
+<div class="row">
 <% @color.images.each do |image| %>
-<%= image_tag image.url %>
+<div class="">
+<%= image_tag image.url, style: "max-height: 420px" %>
+</div>
 <% end %>
+</div>
 
 <%= link_to 'Edit', edit_color_path(@color) %> |
 <%= link_to 'Destroy', @color, method: :delete, data: { confirm: 'Are you sure?' } %>
