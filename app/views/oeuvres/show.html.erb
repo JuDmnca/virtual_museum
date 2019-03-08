@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Url:</strong>
+  <%= image_tag @oeuvre.url %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= link_to @oeuvre.color, @oeuvre.color %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @oeuvre.title %>
+</p>
+
+<p>
+  <strong>Artist:</strong>
+  <%= @oeuvre.artist %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @oeuvre.date %>
+</p>
+
+<%= link_to 'Edit', edit_oeuvre_path(@oeuvre) %> |
+<%= link_to 'Back', oeuvres_path %>

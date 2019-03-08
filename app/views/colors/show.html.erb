@@ -15,24 +15,27 @@
 
 <tr>
   <th><strong style="font-size: 30PX">Historique</strong></th>
-  <th><strong style="font-size: 30PX" >Symbolique</strong></th>
+  <th><strong style="font-size: 30PX">Symbolique</strong></th>
 </tr>
 
 <tr>
-	 <td><%= @color.history %></td>
-	 <td><%= @color.symb %></td>
+	 <td style="max-width: 400px"><%= simple_format @color.history %></td>
+	 <td style="max-width: 400px"><%= simple_format @color.symb %></td>
+
 </tr>
 
   </table>
+
+  	 <div class="row">
+	    <% @color.oeuvres.each do |oeuvre| %>
+			<div class="">
+			<%= image_tag oeuvre.url, style: "max-height: 420px" %>
+			</div>
+		<% end %>
+	</div>
+
 </p>
 
-<div class="row">
-<% @color.images.each do |image| %>
-<div class="">
-<%= image_tag image.url, style: "max-height: 420px" %>
-</div>
-<% end %>
-</div>
 
 <%= link_to 'Edit', edit_color_path(@color) %> |
 

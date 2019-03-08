@@ -1,5 +1,5 @@
 class Color < ApplicationRecord
-	has_many :images
+	has_many :oeuvres
 	def to_s
 		"#{color}"
 	end 
