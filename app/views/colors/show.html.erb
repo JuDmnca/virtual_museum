@@ -11,14 +11,16 @@
 <p>
 <br>
 
-<table style="width:100%">
+<table style="width:100%" class="table">
 
 <tr>
   <th><strong style="font-size: 30PX">Historique</strong></th>
-  <%= @color.history %>
-
   <th><strong style="font-size: 30PX" >Symbolique</strong></th>
-  <%= @color.symb %>
+</tr>
+
+<tr>
+	 <td><%= @color.history %></td>
+	 <td><%= @color.symb %></td>
 </tr>
 
   </table>

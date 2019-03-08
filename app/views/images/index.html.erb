@@ -14,7 +14,7 @@
   <tbody>
     <% @images.each do |image| %>
       <tr>
-        <td><%= image.url %></td>
+        <td style="max-width: 800px"><%= image.url %></td>
         <td><%= image.color %></td>
         <td><%= link_to 'Show', image %></td>
         <td><%= link_to 'Edit', edit_image_path(image) %></td>
