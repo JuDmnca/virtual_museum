@@ -14,4 +14,8 @@
  *= require_self
  */
 
-body {text-align : center}
+body {
+	text-align : center;
+	font-family: 'Roboto Slab', serif}
+
+

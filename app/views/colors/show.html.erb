@@ -9,6 +9,7 @@
 
 
 <p>
+	<%= link_to 'Back', colors_path %>
 <br>
 
 <table style="width:100%" class="table">
@@ -26,17 +27,27 @@
 
   </table>
 
-  	 <div class="row">
+  	 <div>
 	    <% @color.oeuvres.each do |oeuvre| %>
-			<div class="">
-			<%= image_tag oeuvre.url, style: "max-height: 420px" %>
+			<div>
+			<%= image_tag oeuvre.url, style: "width: 700px" %>
 			</div>
+			<div>
+			<%= oeuvre.title %>
+			</div>
+			<div>
+			<%= oeuvre.artist %>
+			</div>
+			<div>
+			<%= oeuvre.date %>
+			</div>
+			<br>
 		<% end %>
 	</div>
 
 </p>
 
 
-<%= link_to 'Edit', edit_color_path(@color) %> |
+<%= link_to 'Edit', edit_color_path(@color) %> 
 
-<%= link_to 'Back', colors_path %>
+
